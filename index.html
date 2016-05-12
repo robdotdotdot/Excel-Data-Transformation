@@ -1,1 +1,145 @@
-Excel Data Transformation
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Excel-data-transformation by robdotdotdot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Excel-data-transformation</h1>
+      <h2 class="project-tagline">A set of user-defined functions and stored procedures for the transformation, manipulation, and management of data</h2>
+      <a href="https://github.com/robdotdotdot/Excel-Data-Transformation" class="btn">View on GitHub</a>
+      <a href="https://github.com/robdotdotdot/Excel-Data-Transformation/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/robdotdotdot/Excel-Data-Transformation/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="excel-data-transformation" class="anchor" href="#excel-data-transformation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Excel-Data-Transformation</h1>
+
+<p>Visual Basic remains the most dreaded developer language<sup><a href="http://stackoverflow.com/research/developer-survey-2016#technology-most-loved-dreaded-and-wanted">1</a></sup>, but it's still extremely useful for the many that use Excel Spreadsheets. A future translation of the code to Google App Script is not currently in the works, but could be a future development.</p>
+
+<p>This repo is distrubuted under the MIT License and provides a set of user-defined functions and stored procedures for the transformation, manipulation, and management of data. Enjoy! <img class="emoji" title=":punch:" alt=":punch:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44a.png" height="20" width="20" align="absmiddle"></p>
+
+<p>Current list of UDFs</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Function</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>TextTransform</code></td>
+<td align="left">Cleans a string</td>
+</tr>
+<tr>
+<td align="left"><code>RegExTester</code></td>
+<td align="left">Test a string for a regex pattern</td>
+</tr>
+<tr>
+<td align="left"><code>LOOKUPALL</code></td>
+<td align="left">Modified lookup that returns all matches of a single value to a single cell</td>
+</tr>
+<tr>
+<td align="left"><code>LOOKUPLIST</code></td>
+<td align="left">Modified lookup that returns the first match of multiple values to a single cell</td>
+</tr>
+</tbody>
+</table>
+
+<p>Current list of stored procedures</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Procedure</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>RearrangeColumns</code></td>
+<td align="left">Rearranges columnar data to your specification</td>
+</tr>
+<tr>
+<td align="left"><code>CustomFilterBySelection</code></td>
+<td align="left">Rearranges columnar data to your specification</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="example-usage" class="anchor" href="#example-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Usage</h3>
+
+<p>In each example, an abbrevaited version of the of UDF is provided as a reference. Please see the code comments for parameter details.</p>
+
+<h5>
+<a id="texttransform" class="anchor" href="#texttransform" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TextTransform</h5>
+
+<pre><code>TextTransform(t [, IgnoreCase, IgnoreSpace = False, IgnoreSymbol = False,
+    IgnoreNumber = False, IgnoreQuote = False])
+</code></pre>
+
+<p><img src="/img/TextTransform.jpg" alt="Sample usage image for TextTransform"></p>
+
+<h5>
+<a id="regextester" class="anchor" href="#regextester" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RegExTester</h5>
+
+<pre><code>RegExTester(pattern, setence [, outputTrueFalse = False, MatchAll = False,
+    delimiter = ","])
+</code></pre>
+
+<p><img src="/img/RegExTester.jpg" alt="Sample usage image for RegExTester"></p>
+
+<h5>
+<a id="lookupall" class="anchor" href="#lookupall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LOOKUPALL</h5>
+
+<pre><code>LOOKUPALL(lookup_value, table_array, col_index_num [, delim = ","])
+</code></pre>
+
+<p><img src="/img/LOOKUPALL.jpg" alt="Sample usage image for LOOKUPALL"></p>
+
+<h5>
+<a id="lookuplist" class="anchor" href="#lookuplist" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LOOKUPLIST</h5>
+
+<pre><code>LOOKUPLIST(lookup_value, table_array, col_index_num [, lookup_as_num = False,
+    hlook = False, input_delim = ",", output_delim = ","])
+</code></pre>
+
+<p><img src="/img/LOOKUPLIST.jpg" alt="Sample usage image for LOOKUPLIST"></p>
+
+<h5>
+<a id="rearrangecolumns" class="anchor" href="#rearrangecolumns" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RearrangeColumns</h5>
+
+<pre><code>Call RearrangeColumns()
+</code></pre>
+
+<p><img src="/img/rearrangeColumns.gif" alt="Sample usage image for rearrangeColumns"></p>
+
+<h5>
+<a id="customfilterbyselection" class="anchor" href="#customfilterbyselection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CustomFilterBySelection</h5>
+
+<pre><code>Call CustomFilterBySelection()
+</code></pre>
+
+<p><img src="/img/CustomFilterBySelection.gif" alt="Sample usage image for CustomFilterBySelection"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/robdotdotdot/Excel-Data-Transformation">Excel-data-transformation</a> is maintained by <a href="https://github.com/robdotdotdot">robdotdotdot</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
