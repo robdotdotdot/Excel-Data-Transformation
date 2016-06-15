@@ -19,7 +19,7 @@ Current list of stored procedures
 | Procedure| Description |
 | :--- |:--- |
 | `RearrangeColumns` | Rearranges columnar data to your specification |
-| `CustomFilterBySelection` | Rearranges columnar data to your specification |
+| `CustomFilterBySelection` | Filters a field for a list of preselected values |
 
 ### Example Usage
 In each example, an abbrevaited version of the of UDF is provided as a reference. Please see the code comments for parameter details.
